@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=, initial-scale=1.0" />
+    <title>Bai 1 tuan 1s</title>
+  </head>
+  <body>
+    <h1>Quản Lí Lớp Học</h1>
+    <div class="container">
+      <div class="form-section">
+        <h2>Thêm/Sửa Lớp Học</h2>
+        <form id="studentForm">
+          <div class="form-group">
+            <label for="studentClass">Lớp:</label>
+            <input
+              type="text"
+              id="studentClass"
+              placeholder="Nhập lớp"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="studentMajor">Ngành Học:</label>
+            <input
+              type="text"
+              id="studentMajor"
+              placeholder="Nhập ngành học sinh viên"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="studentGpa">Sĩ số lớp:</label>
+            <input
+              type="number"
+              step="1"
+              id="studentGpa"
+              placeholder="Nhập sĩ số lớp"
+              required
+            />
+          </div>
+          <button type="submit" id="addBtn">Thêm lớp Học</button>
+        </form>
+      </div>
+
+      <!-- Danh sách sinh viên -->
+      <div class="list-section">
+        <h2>Danh Sách Sinh Viên</h2>
+        <input
+          type="text"
+          id="searchInput"
+          placeholder="Tìm kiếm sinh viên..."
+        />
+        <table>
+          <thead>
+            <tr>
+              <th>Mã Sinh Viên</th>
+              <th>Tên Sinh Viên</th>
+              <th>Tuổi</th>
+              <th>Lớp</th>
+              <th>Ngành Học</th>
+              <th>Điểm Trung Bình</th>
+              <th>Chức Năng</th>
+            </tr>
+          </thead>
+          <tbody id="studentTableBody">
+            <!-- Dữ liệu sinh viên sẽ được thêm vào đây -->
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </body>
+</html>
