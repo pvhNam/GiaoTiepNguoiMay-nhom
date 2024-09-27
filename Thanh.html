@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quản lý Sinh viên</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        table, th, td {
+            border: 1px solid black;
+        }
+        th, td {
+            padding: 8px;
+            text-align: left;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            margin-right: 10px;
+        }
+        .form-group input {
+            padding: 5px;
+            width: 200px;
+        }
+        button {
+            padding: 10px;
+            margin-top: 10px;
+        }
+        #searchInput {
+            margin-top: 20px;
+            padding: 10px;
+            width: 300px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Quản lý Sinh viên</h1>
+
+    <div class="form-group">
+        <label for="studentName">Tên sinh viên:</label>
+        <input type="text" id="studentName" placeholder="Nhập tên sinh viên">
+    </div>
+
+    <div class="form-group">
+        <label for="studentClass">Lớp:</label>
+        <input type="text" id="studentClass" placeholder="Nhập lớp sinh viên">
+    </div>
+
+    <div class="form-group">
+        <label for="midtermScore">Điểm giữa kỳ:</label>
+        <input type="number" id="midtermScore" min="0" max="10" placeholder="Nhập điểm giữa kỳ">
+    </div>
+
+    <div class="form-group">
+        <label for="finalScore">Điểm thi:</label>
+        <input type="number" id="finalScore" min="0" max="10" placeholder="Nhập điểm thi">
+    </div>
+
+    <button onclick="addStudent()">Thêm sinh viên</button>
+
+    <h2>Danh sách sinh viên</h2>
+    <input type="text" id="searchInput" onkeyup="searchStudent()" placeholder="Tìm kiếm theo tên...">
+
+    <table>
+        <thead>
+            <tr>
+                <th>Tên</th>
+                <th>Lớp</th>
+                <th>Điểm giữa kỳ</th>
+                <th>Điểm thi</th>
+                <th>Điểm trung bình</th>
+                <th>Hành động</th>
+            </tr>
+        </thead>
+        <tbody id="studentList"></tbody>
+    </table>
+</body>
+</html>
